@@ -184,7 +184,7 @@ Feel free to check the [issues page](github.com/touredri/issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project give it a start
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
