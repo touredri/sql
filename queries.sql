@@ -9,14 +9,14 @@ select * from animals where neutered= true;
 select * from animals where name != 'Gabumon';
 select * from animals where weight_kg between 10.3 and 17.4;
 
-start transaction;
+begin;
 update animals set species = 'unspecified';
 rollback;
-start transaction;
+begin;
 update animals set species='digimon' where name like '%mon';
 update animals set species = 'pokemon' where species = 'NULL';
 commit,
-start transaction;
+begin;
 delete from animals;
 rollback;
 start transaction;
