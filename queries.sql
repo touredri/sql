@@ -30,3 +30,22 @@ select count(*) from animals;
 select * from animals where escape_attempts = 0;
 select avg(weight_kg) from animals;
 select avg(escape_attempts) as average_escapes from animals where date_of_birth between '1990-01-01' and '2000-01-01';
+
+select name from animals inner join owners on animals.owners_id = owners.id
+    where owners.full_name = 'Melody Pond';
+select animals.name from animals inner join species on animals.species_id = species.id
+    where species.name = 'Pokemon';
+select species_id, count(*) as count from animals group by species_id;
+select name from animals inner join species on animals.species_id = species.id where species_id = owners_id;
+select name from animals inner join owners  on animals.owners_id = owners.id  where animals.escape_attempts = 0;
+
+SELECT o.full_name, COUNT(*) AS count
+FROM owners o
+JOIN animals a ON o.id = a.owner_id
+GROUP BY o.full_name
+ORDER BY count DESC
+LIMIT 1;
+
+
+
+
