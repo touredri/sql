@@ -17,7 +17,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -73,13 +72,6 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
  install MySql or posgreSql
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
 
 ### Setup
 
@@ -87,10 +79,10 @@ Clone this repository to your desired folder:
 
 Example commands:
 
-```sh
+sh
   cd my-folder
   git clone git@github.com:myaccount/my-project.git
-```
+
 
 
 ### Install
@@ -148,8 +140,6 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Author1**
 
 - GitHub: [@githubhandle](https://github.com/touredri)
@@ -161,8 +151,6 @@ Example:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Manage access]**
 
@@ -181,8 +169,6 @@ Feel free to check the [issues page](github.com/touredri/issues/).
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
-
-> Write a message to encourage readers to support your project
 
 If you like this project give it a start
 
