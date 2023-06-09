@@ -29,10 +29,17 @@ ALTER TABLE animals ADD COLUMN owners_id INT,
     ADD FOREIGN KEY (owners_id) REFERENCES owners(id);
     
     
+create table visits(vets_id int, foreign key (vets_id) references vets(id), 
+                    visits_date date, animals_id int, foreign key (animals_id)  
+                    references animals(id));    
     
     
-    
-    
+CREATE TABLE specializations (
+    ->     species_id INT,
+    ->     vets_id INT,
+    ->     FOREIGN KEY (species_id) REFERENCES species (id),
+    ->     FOREIGN KEY (vets_id) REFERENCES vets (id)
+    -> );    
     
     
     
