@@ -56,3 +56,74 @@ LEFT JOIN species ON animals.species_id = species.id
 WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
 
 
+select a.name from animals a  
+join visits v on a.id = v.animals_id 
+join vets vt on v.vets_id = vt.id 
+where vt.name = 'William Tatcher' 
+order by v.visits_date desc limit 1;
+
+SELECT COUNT(DISTINCT a.id) AS num_animals
+    FROM animals a
+    JOIN visits v ON a.id = v.animals_id
+    JOIN vets vt ON v.vets_id = vt.id
+    WHERE vt.name = 'Stephanie Mendez';
+
+SELECT v.name, s.name
+     FROM vets v
+     LEFT JOIN specializations sp ON v.id = sp.vets_id
+     LEFT JOIN species s ON sp.species_id = s.id;
+
+SELECT a.name
+    FROM animals a
+    JOIN visits v ON a.id = v.animals_id
+    JOIN vets vt ON v.vets_id = vt.id
+    WHERE vt.name = 'Stephanie Mendez'
+    AND v.visits_date BETWEEN '2020-04-01' AND '2020-08-30';
+
+
+SELECT a.name
+     FROM animals a
+     JOIN visits v ON a.id = v.animals_id
+     GROUP BY a.name
+     ORDER BY COUNT(*) DESC
+     LIMIT 1;
+
+SELECT v.name
+     FROM vets v
+     JOIN visits vi ON v.id = vi.vets_id
+     JOIN animals a ON vi.animals_id = a.id
+     WHERE v.name = 'Maisy Smith'
+     ORDER BY vi.visits_date ASC
+     LIMIT 1;
+
+SELECT a.name
+     FROM vets v
+     JOIN visits vi ON v.id = vi.vets_id
+     JOIN animals a ON vi.animals_id = a.id
+     WHERE v.name = 'Maisy Smith'
+     ORDER BY vi.visits_date ASC
+     LIMIT 1;
+
+SELECT a.name AS animal_name, v.name AS vet_name, vi.visits_date
+     FROM visits vi
+     JOIN animals a ON vi.animals_id = a.id
+     JOIN vets v ON vi.vets_id = v.id
+     ORDER BY vi.visits_date DESC
+     LIMIT 1;
+
+SELECT COUNT(*) AS num_visits
+     FROM visits v
+     JOIN animals a ON v.animals_id = a.id
+     JOIN vets vt ON v.vets_id = vt.id
+     LEFT JOIN specializations sp ON vt.id = sp.vets_id AND a.species_id = sp.species_id
+     WHERE sp.species_id IS NULL;
+
+select a.name from animals a 
+join visits v on a.id = v.animals_id 
+join vets on vets.id = v.vets_id 
+where vets.name = 'Maisy Smith' 
+group by a.name order by count(*)  desc limit 1;
+
+
+
+
