@@ -35,6 +35,10 @@ select name from animals inner join owners on animals.owners_id = owners.id
     where owners.full_name = 'Melody Pond';
 select animals.name from animals inner join species on animals.species_id = species.id
     where species.name = 'Pokemon';
+select * from animals a inner join species s on a.species_id = s.id where s.name = 'Pokemon';
+select a.name, o.full_name from animals a right join owners o on a.owners_id = o.id;
+select a.name, o.full_name from animals a inner join owners o on a.owners_id = o.id 
+    where a.species_id = (select id from species where name = 'Digimon') and o.full_name = 'Jennifer Orwell';
 select species_id, count(*) as count from animals group by species_id;
 select name from animals inner join species on animals.species_id = species.id where species_id = owners_id;
 select name from animals inner join owners  on animals.owners_id = owners.id  where animals.escape_attempts = 0;
@@ -46,6 +50,9 @@ GROUP BY o.full_name
 ORDER BY count DESC
 LIMIT 1;
 
-
+SELECT animals.* FROM animals 
+LEFT JOIN owners ON animals.owner_id = owners.id 
+LEFT JOIN species ON animals.species_id = species.id 
+WHERE owners.full_name = 'Jennifer Orwell' AND species.name = 'Digimon';
 
 
