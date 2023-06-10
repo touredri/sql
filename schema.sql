@@ -32,14 +32,15 @@ ALTER TABLE animals ADD COLUMN owners_id INT,
 create table visits(vets_id int, foreign key (vets_id) references vets(id), 
                     visits_date date, animals_id int, foreign key (animals_id)  
                     references animals(id));    
-    
+
+create table vets(id int auto_increment primary key, name varchar(30), age int, date_of_graduation date);
     
 CREATE TABLE specializations (
-    ->     species_id INT,
-    ->     vets_id INT,
-    ->     FOREIGN KEY (species_id) REFERENCES species (id),
-    ->     FOREIGN KEY (vets_id) REFERENCES vets (id)
-    -> );    
+         species_id INT,
+         vets_id INT,
+         FOREIGN KEY (species_id) REFERENCES species (id),
+         FOREIGN KEY (vets_id) REFERENCES vets (id)
+     );    
     
     
     
