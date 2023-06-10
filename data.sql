@@ -22,6 +22,12 @@ update animals set owners_id = (select id from owners where full_name = 'Bob')  
 update animals set owners_id = (select id from owners where full_name = 'Melody Pond')  where name = 'Charmander' or name = 'Squirtle' or name= 'Blossom';
 update animals set owners_id = (select id from owners where full_name = 'Dean Winchester')  where name = 'Angemon' or name = 'Boarmon';
 
+INSERT INTO vets (name, age, date_of_graduation)
+    -> VALUES
+    -> ('William Tatcher', 45, '2000-04-23'),
+    -> ('Maisy Smith', 26, '2019-01-17'),
+    -> ('Stephanie Mendez', 64, '1981-05-04'),
+    -> ('Jack Harkness', 38, '2008-06-08');
 
 insert into specializations values(
     -> (select id from vets where name = 'William Tatcher'),
