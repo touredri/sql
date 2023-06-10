@@ -23,8 +23,6 @@
 
 # 📖 [SQL] <a name="SQL"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[SQL]** is a strucured query language use to create database and added tables then query informations inside tables
 
 ## 🛠 Built With <a name="built-with"></a>
