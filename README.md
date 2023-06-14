@@ -1,3 +1,5 @@
+![vet_client](https://github.com/touredri/sql/assets/112565844/c0ca3bde-634d-4dce-a30b-118321452838)
+
 <a name="readme-top"></a>
 # 📗 Table of Contents
 
